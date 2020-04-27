@@ -2,7 +2,7 @@ import invariant from "invariant";
 
 ////////////////////////////////////////////////////////////////////////////////
 // startsWith(string, search) - Check if `string` starts with `search`
-let startsWith = (string, search) => {
+let startsWith = (string, search = '') => {
   return string.substr(0, search.length) === search;
 };
 
@@ -27,7 +27,7 @@ let startsWith = (string, search) => {
 //     { route, params, uri }
 //
 // I know, I should use TypeScript not comments for these types.
-let pick = (routes, uri) => {
+let pick = (routes, uri = '') => {
   let match;
   let default_;
 
